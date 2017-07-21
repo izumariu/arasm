@@ -15,9 +15,9 @@ Blocks can be created using "." + block_name, and are closed with "~" + block_na
 Example:
 
     dne $2093550 0 .a
-		lof $2093550
+    lof $2093550
     mvw $88 $100
-		~a
+    ~a
 
 Numeric literals are additionally prefixed with a ```$``` if they are formatted as hexadecimals.
 
@@ -87,7 +87,7 @@ Used to preform pointer relative operations.
 #### Repeat operation.
 Repeats a block of codes for n times. The block can include conditional instructions.
 Repeat blocks cannot contain further repeats.
-[ARASM]: rop <n> <block>
+```rop <n> <block>```
 
 #### End-if instruction.
 Ends the most recent conditional block.
@@ -140,12 +140,12 @@ Loads 'stored' with the 8bit value at (addr + 'offset').
 
 #### Add to 'offset'.
 Adds val to the 'offset' register .
-[ARASM]: aof <val>
+```aof <val>```
 
 #### Direct memory write.
 Writes num_bytes bytes from list_as_val to the addresses starting at (addr_start + 'offset').
-[ARASM]: fmv <addr_start> <list_as_val> <num_bytes>
+```fmv <addr_start> <list_as_val> <num_bytes>```
 
 #### Memory copy
 Copied num_bytes bytes from addresses starting at the 'offset' register to addresses starting at addr_start.
-[ARASM]: fcp <addr_start> <num_bytes>
+```fcp <addr_start> <num_bytes>```
