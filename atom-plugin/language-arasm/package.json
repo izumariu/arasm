@@ -1,11 +1,11 @@
 {
   "name": "language-arasm",
   "main": "./lib/language-arasm",
-  "version": "1.0",
-  "description": "A short description of your package",
+  "version": "0.0.0",
+  "description": "ARASM grammar",
   "keywords": [
   ],
-  "repository": "https://github.com/sesshomariu/arasm/tree/master/atom-plugin/language-arasm",
+  "repository": "https://github.com/sesshomariu/arasm-plugin/",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
