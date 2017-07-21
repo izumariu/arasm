@@ -1,0 +1,29 @@
+"fileTypes": [
+	"arasm"
+]
+
+"name": "ARASM (Action Reply Assembly)"
+"scopeName": "source.arasm"
+
+"patterns": [
+	{
+		"match": ";.*$"
+		"name": "comment.line"
+	}
+	{
+		"match": "(?i)\\b(mv[dwb]|[dw]lt|[dw]gt|[dw]eq|[dw]ne|[lsa]of|rop|[as]st|si[dwb]|ls[dwb]|fmv|fcp)"
+		"name": "keyword.mnemonic"
+	}
+	{
+		"match": "(?i)\\s*([0-9]+|\\$[0-9a-f]+)\\s*"
+		"name": "entity.name.variable.identifier"
+	}
+	{
+		"match": "(?i)\\s*\\.[^\\s;]+\\s*"
+		"name": "entity.name.function.label"
+	}
+	{
+		"match": "(?i)\\s*~[^\\s;]+\\s*"
+		"name": "entity.name.function.label"
+	}
+]

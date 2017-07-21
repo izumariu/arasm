@@ -1,0 +1,67 @@
+'.source.arasm':
+	'Write 32 bit':
+		'prefix': 'mvd'
+		'body': 'mvd $1 $2'
+	'Write 16 bit':
+		'prefix': 'mvw'
+		'body': 'mvd $1 $2'
+	'Write 8 bit':
+		'prefix': 'mvb'
+		'body': 'mvd $1 $2'
+	'32 bit "If-less-than"':
+		'prefix': 'dlt'
+		'body': 'dlt $1 $2 $3'
+	'32 bit "If-greater-than"':
+		'prefix': 'dgt'
+		'body': 'dgt $1 $2 $3'
+	'32 bit "If-equal-to"':
+		'prefix': 'deq'
+		'body': 'deq $1 $2 $3'
+	'32 bit "If-not-equal-to"':
+		'prefix': 'dne'
+		'body': 'dne $1 $2 $3'
+	'16 bit "If-less-than"':
+		'prefix': 'wlt'
+		'body': 'wlt $1 $2 $3'
+	'16 bit "If-greater-than"':
+		'prefix': 'wgt'
+		'body': 'wgt $1 $2 $3'
+	'16 bit "If-equal-to"':
+		'prefix': 'weq'
+		'body': 'weq $1 $2 $3'
+	'16 bit "If-not-equal-to"':
+		'prefix': 'wne'
+		'body': 'wne $1 $2 $3'
+	'Load offset register with data at addr':
+		'prefix': 'lof'
+		'body': 'lof $1'
+	'Repeat block n times':
+		'prefix': 'rop'
+		'body': 'rop $1 $2'
+	'Load offset register with val':
+		'prefix': 'sof'
+		'body': 'sof $1'
+	'Add to accumulator':
+		'prefix': 'ast'
+		'body': 'ast $1'
+	'Set accumulator':
+		'prefix': 'sst'
+		'body': 'sst $1'
+	'32 bit store&inc':
+		'prefix': 'sid'
+		'body': 'sid $1'
+	'16 bit store&inc':
+		'prefix': 'siw'
+		'body': 'siw $1'
+	'8 bit store&inc':
+		'prefix': 'sib'
+		'body': 'sib $1'
+	'Add val to offset':
+		'prefix': 'aof'
+		'body': 'aof $1'
+	'Direct memory write':
+		'prefix': 'fmv'
+		'body': 'fmv $1 $2 $3'
+	'32bit store&inc':
+		'prefix': 'fcp'
+		'body': 'fcp $1 $2'

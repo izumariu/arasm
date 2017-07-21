@@ -71,7 +71,7 @@ D1000000 00000000 - Ends the current repeat block. Also implicitly ends any cond
 End-code instruction.
 D2000000 00000000 - Ends the current repeat block (if any), then End-if's any further outstanding conditional statements.
 Also sets 'offset' and 'stored' to zero.
-[ARASM]: // nothing
+[ARASM]: ~#
 
 Set offset register.
 D3000000 YYYYYYYY - Loads the offset register with the value YYYYYYYY.

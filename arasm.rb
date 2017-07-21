@@ -37,7 +37,7 @@ def assert_args(com,ln,*types)
 	com.is_a?(Array)||com=com.split
 	com.length-1==types.length||abort_with_style(com.join(" "),ln,"WRONG NUMBER OF ARGUMENTS, EXPECTED #{types.length}, GOT #{com.length-1}.")
 	type_rxps = {
-		/\.[^\s]+/ 			=> :block,
+		/\.[^\s;]+/ 		=> :block,
 		/\$[A-Z0-9]+/i 	=> :num,
 		/[0-9]+/i 			=> :num,
 		/.*/						=> :some_weird_alphanumeric_foo
@@ -116,8 +116,10 @@ def parse_command(c,ln)
 
 	when /^~/
 		bname = command[0][1..-1]
-		$blocks[bname]||abort_with_style(c,ln,"TRYING TO CLOSE BLOCK `#{bname}` WHICH WASN'T OPENED BEFORE.")
-		if $blocks[bname] == "if"
+		bname==?#||$blocks[bname]||abort_with_style(c,ln,"TRYING TO CLOSE BLOCK `#{bname}` WHICH WASN'T OPENED BEFORE.")
+		if bname == ?#
+			barr_t << "d2" << ("0"*14)
+		elsif $blocks[bname] == "if"
 			barr_t << "d0" << ("0"*14)
 		else
 			barr_t << "d1" << ("0"*14)

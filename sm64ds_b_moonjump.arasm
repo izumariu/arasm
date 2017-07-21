@@ -8,6 +8,6 @@
 weq $2097598 $fffd0002 .if1
 mvd $217abe0 105251
 ~if1
-weq $2097598 $fffd0002 .foo_bar_baz_you_can_use-any-character!	; but no whitespace ;)
+weq $2097598 $fffd0002 .foo_bar_baz_you_can*use$any%character! 	; but no whitespace or ';' ;)
 mvd $21697c0 105251
-~foo_bar_baz_you_can_use-any-character!
+~foo_bar_baz_you_can*use$any%character!
