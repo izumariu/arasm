@@ -1,13 +1,10 @@
 {
   "name": "language-arasm",
   "main": "./lib/language-arasm",
-  "version": "0.0.0",
+  "version": "1.0",
   "description": "A short description of your package",
   "keywords": [
   ],
-  "activationCommands": {
-    "atom-workspace": "language-arasm:toggle"
-  },
   "repository": "https://github.com/sesshomariu/arasm/tree/master/atom-plugin/language-arasm",
   "license": "MIT",
   "engines": {
